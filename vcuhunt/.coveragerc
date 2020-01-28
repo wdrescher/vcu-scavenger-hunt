@@ -1,0 +1,5 @@
+[run]
+include = vcuhunt/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin
