@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hunt VCU | Home</title>
+    <link rel="stylesheet" type="text/css" href="Index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.min.css" integrity="sha256-NcMT8A7CRd4NaP6kR4nTnijg2WYyJdZ6F8Tg/hL8Gxw=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
+</head>
+<body>
+    <header> </header>
+    <div class="welcome">
+        <h1 class="animated bounceInRight slow">hunt vcu</h1>
+        <p>the superior vcu scavenger hunt</p>
+        <button class="bttn-gradient bttn-lg bttn-success">
+          <i>Start</i> <!-- login prompt here-->
+        </button>
+    </div>
+    
+    <section class="slideshow"> 
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <img src="Images/img1.jpg">
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="Images/img2.jpg">
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="Images/img3.jpg" >
+            </div>
+
+            <div class="mySlides fade">
+              <img src="Images/img4.jpg" >
+            </div>
+    </section>
+    <footer>
+      <p>Created by Willem Drescher, Bryan Hilldrup, and An Nguyen</p>
+      <p>Richmond, VA</p>
+      <p>©2020 Group #1</p>
+    </footer>
+    
+</body>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 4000); // Change image every 4 seconds
+}
+
+
+
+</script>
+
+</html>
