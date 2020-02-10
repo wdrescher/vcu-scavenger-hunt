@@ -1,1 +1,46 @@
 {% extends "base.html" %}
+
+{% load static %}
+
+{% block full_screen %}
+    <section class="slideshow"> 
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="{% static "images/landmarks/img1.jpg" %}">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="{% static "images/landmarks/img2.jpg" %}">
+            </div>
+            
+            <div class="mySlides fade">
+                <img src="{% static "images/landmarks/img3.jpg" %}">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="{% static "images/landmarks/img4.jpg" %}">
+            </div>
+    </section>
+{% endblock %}
+
+{% block javascript %}
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+      slideIndex = 1
+  }
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 8000); // Change image every 4 seconds
+}
+
+</script>
+{% endblock javascript %}

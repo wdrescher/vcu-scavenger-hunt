@@ -14,7 +14,6 @@ class UserDetailView(LoginRequiredMixin, DetailView):
     slug_field = "username"
     slug_url_kwarg = "username"
 
-
 user_detail_view = UserDetailView.as_view()
 
 

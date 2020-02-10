@@ -15,6 +15,7 @@ urlpatterns = [
     # User management
     path("users/", include("vcuhunt.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
+    path("landmarks/", include("vcuhunt.landmarks.urls", namespace="landmarks"))
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

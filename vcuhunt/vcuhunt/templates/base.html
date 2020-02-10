@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{% block title %}vcuhunt{% endblock title %}</title>
+    <title>VCU Hunt | {% block title %}Home{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -19,7 +19,8 @@
     
     <!-- Latest compiled and minified Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.min.css" integrity="sha256-NcMT8A7CRd4NaP6kR4nTnijg2WYyJdZ6F8Tg/hL8Gxw=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
 
     <!-- Your stuff: Third-party CSS libraries go here -->
     
@@ -43,7 +44,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
@@ -74,6 +75,11 @@
 
     </div>
 
+    <div class="full-screen">
+      {% block full_screen %}
+      {% endblock full_screen %}
+    </div>
+
     <div class="container">
 
       {% if messages %}
@@ -88,7 +94,13 @@
 
     </div> <!-- /container -->
 
-    {% block modal %}{% endblock modal %}
+    {% block modal %}
+    {% endblock modal %}
+
+    <nav class="navbar fixed-bottom navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">vcuhunt</a>
+      <div class="nav-item text-white">Created by Willem Drescher, Bryan Hilldrup, and An Nguyen ©2020 Group #1 </div>
+    </nav>
 
     <!-- Le javascript
     ================================================== -->
