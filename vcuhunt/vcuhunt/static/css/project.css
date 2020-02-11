@@ -27,11 +27,13 @@ header {
   z-index: 1; }
 
 .slideshow {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
-  position: relative; }
+  position: absolute;
+  top: 7.5vh;
+  bottom: 0; }
 
 /** {box-sizing:border-box}
 
@@ -109,42 +111,38 @@ header {
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 6s;
   animation-name: fade;
-  animation-duration: 1.5s; }
+  animation-duration: 6s; }
 
 @-webkit-keyframes fade {
-  0% {
-    opacity: .4; }
-  10% {
-    opacity: 1; }
-  90% {
-    opacity: 1; }
-  100% {
-    opacity: .4; } }
+  from {
+    opacity: .7; }
+  to {
+    opacity: 1; } }
 
 @keyframes fade {
-  0% {
-    opacity: .4; }
-  10% {
-    opacity: 1; }
-  90% {
-    opacity: 1; }
-  100% {
-    opacity: .4; } }
+  from {
+    opacity: .7; }
+  to {
+    opacity: 1; } }
 
 .welcome {
   width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
-  position: absolute;
-  top: 0%;
+  position: relative;
+  top: 0;
   bottom: 0;
   text-align: center;
   padding-top: 50vh;
   font-size: 3em;
-  line-height: 1.5em;
+  line-height: 1em;
   color: silver; }
+  .welcome h1 {
+    font-size: 2.5em;
+    margin-bottom: 0; }
 
 footer {
   background-color: seagreen;
@@ -225,3 +223,10 @@ footer {
 .landmark div h4 {
   color: seagreen;
   position: relative; }
+
+.start {
+  border-radius: 20px;
+  background: seagreen;
+  font-size: 1.1em;
+  padding: 7px;
+  color: white; }
