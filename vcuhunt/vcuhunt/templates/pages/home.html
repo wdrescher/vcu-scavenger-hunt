@@ -23,6 +23,12 @@
     </section>
 {% endblock %}
 
+{% block content %}
+
+    <a href="{% url 'landmarks:list' %}"> landmarks </a>
+
+{% endblock content %}
+
 {% block javascript %}
 <script>
 var slideIndex = 0;
