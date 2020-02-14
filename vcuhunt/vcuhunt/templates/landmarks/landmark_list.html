@@ -1,16 +1,12 @@
 {% extends 'base.html' %}
 
-{% block full_screen %}
+{% block content %}
 
     {% if landmark_list %}
         {% for landmark in landmark_list %}
-            <div class="whatever"> {{landmark.name}} </div>
-
-            {% url 'landmarks:detail' pk=landmark.pk %}
+            <a href="{% url 'landmarks:detail' pk=landmark.pk %}">{{landmark.name}}</a>
         {% endfor %}
     {% else %}
         no landmarks
     {% endif %}
-
-    TEXT
-{% endblock full_screen %}
+{% endblock content %}

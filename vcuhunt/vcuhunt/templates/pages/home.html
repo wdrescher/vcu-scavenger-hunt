@@ -6,7 +6,9 @@
     <div class="welcome">
         <h1 class="animated bounceInRight slow">vcuhunt</h1>
         <p>the superior vcu scavenger hunt</p>
-        <button class="start">Start</button>
+        <a href="{% url 'landmarks:list' %}">
+            <button class="start">Start</button>
+        </a>
     </div>
     <section class="slideshow"> 
             <!-- Full-width images with number and caption text -->
@@ -29,9 +31,6 @@
 {% endblock %}
 
 {% block content %}
-
-    <a href="{% url 'landmarks:list' %}"> landmarks </a>
-
 {% endblock content %}
 
 {% block javascript %}
