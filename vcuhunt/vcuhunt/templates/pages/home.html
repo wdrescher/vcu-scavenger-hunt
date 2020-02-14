@@ -3,6 +3,11 @@
 {% load static %}
 
 {% block full_screen %}
+    <div class="welcome">
+        <h1 class="animated bounceInRight slow">vcuhunt</h1>
+        <p>the superior vcu scavenger hunt</p>
+        <button class="start">Start</button>
+    </div>
     <section class="slideshow"> 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
@@ -45,7 +50,7 @@ function showSlides() {
       slideIndex = 1
   }
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 8000); // Change image every 4 seconds
+  setTimeout(showSlides, 6000); // Change image every 6 seconds
 }
 
 </script>
