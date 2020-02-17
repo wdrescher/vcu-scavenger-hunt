@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="Index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.min.css" integrity="sha256-NcMT8A7CRd4NaP6kR4nTnijg2WYyJdZ6F8Tg/hL8Gxw=" crossorigin="anonymous" />
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <header></header>
@@ -21,19 +22,21 @@
             <button onClick="openForm()">Complete</button>
             <div id="quiz">
                 <form method="post" enctype="text/plain">
-                    <P>1. The word which means "house" is:<BR>
+                    <h3>The word which means house is: </h3> <p>
                     <input type="radio" name="Quiz Question" value="maison">maison<BR>
                     <input type="radio" name="Quiz Question" value="quatre">quatre<BR>
                     <input type="radio" name="Quiz Question" value="soleil">soleil<BR>
                     <input type="radio" name="Quiz Question" value="poisson">poisson<BR>
                     </p>
                 </form>
-                <button onClick="submitAnswer()">Submit</button>
+                <button onClick="submitAnswer()" >Submit</button>
                 <button onClick="closeForm()">Cancel</button>
             </div>
-
         </div>
     </section>
+
+    <div id="quizbackground"></div>
+
     <footer>
         <p>Created by Willem Drescher, Bryan Hilldrup, and An Nguyen</p>
         <p>Richmond, VA</p>
@@ -41,12 +44,17 @@
       </footer>
 </body>
 <script>
+
+  //NEW SHIT below
+  //need to import jquery. script tag is in head
 function openForm() {
     document.getElementById("quiz").style.display = "block";
+    document.getElementById("quizbackground").style.display = "block";
   }
   
   function closeForm() {
     document.getElementById("quiz").style.display = "none";
+    document.getElementById("quizbackground").style.display = "none";
   }
 
   function submitAnswer() {
@@ -69,12 +77,25 @@ function openForm() {
   // Correct answer
   if(userAnswer === "maison") {
      alert("Answer is correct!");
+     closeForm();
   }
   // incorrect answer
   else {
      alert("Answer is wrong!");
+     closeForm();
   }
   
 }
+
+$(document).mouseup(function(e) 
+{
+    var container = $("#quiz");
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) 
+    {
+      closeForm();
+    }
+});
 </script>
 </html>

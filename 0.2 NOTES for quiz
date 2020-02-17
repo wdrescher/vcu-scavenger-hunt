@@ -1,0 +1,18 @@
+Landmark.html
+Change line 25
+
+<P>1. The word which means "house" is:<BR>
+
+to
+
+<h3>The word which means house is: </h3> <p>
+
+After the </section> tag add a new div 
+<div id="quizbackground"></div>
+
+Copy the script at the bottom entirely and import jquery in the head
+
+
+//END landmark.html changes
+
+On Index.css copy the new stuff starting at line 225.

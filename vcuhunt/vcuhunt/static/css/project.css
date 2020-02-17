@@ -140,6 +140,9 @@ header {
   font-size: 3em;
   line-height: 1em;
   color: silver; }
+  @media screen and (max-width: 500px) {
+    .welcome {
+      font-size: 1.5em; } }
   .welcome h1 {
     font-size: 2.5em;
     margin-bottom: 0; }

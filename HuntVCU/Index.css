@@ -1,30 +1,30 @@
 * {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 header {
-    height: 30px;
-    background-color: black;
-    width: 100vw;
-    position: fixed;
-    margin: 0;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  height: 30px;
+  background-color: black;
+  width: 100vw;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .slideshow {
-    height: 100vh;
-    width:100vw;
-    margin: 0;
-    padding:0;
-    position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 /** {box-sizing:border-box}
@@ -35,9 +35,10 @@ header {
 }
 
 .mySlides img {
-    width:100vw;
-    height:100vh;
-    object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* Next & previous buttons */
@@ -51,9 +52,13 @@ header {
   color: white;
   font-weight: bold;
   font-size: 18px;
+  -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 /* Position the "next button" to the right */
@@ -64,7 +69,7 @@ header {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -96,6 +101,7 @@ header {
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
   transition: background-color 0.6s ease;
 }
 
@@ -112,33 +118,40 @@ header {
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .welcome {
-    width:100vw;
-    background-color: rgba(0,0,0,0.6);
-    z-index: 1;
-    position: absolute;
-    top:0%;
-    bottom:0;
-    text-align: center;
-    padding-top: 50vh;
-    font-size: 3em;
-    line-height: 1.5em;
-    color: silver;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  position: absolute;
+  top: 0%;
+  bottom: 0;
+  text-align: center;
+  padding-top: 50vh;
+  font-size: 3em;
+  line-height: 1.5em;
+  color: silver;
 }
 
-
 footer {
-  background-color:seagreen;
-  color:white;
+  background-color: seagreen;
+  color: white;
   width: 100vw;
   height: 10vh;
   position: relative;
@@ -148,47 +161,52 @@ footer {
 }
 
 .preview {
-  width:100vw;
-  height:50vh;
+  width: 100vw;
+  height: 50vh;
   position: relative;
-  object-fit: fill;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .preview img {
-  width:100%;
-  height:100%;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .preview div {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
   width: 100%;
   height: 100%;
-  top:0%;
+  top: 0%;
   position: absolute;
 }
 
 .preview div h1 {
-  top:100%;
-  left:2em;
-  transform: translate(0,-100%);
+  top: 100%;
+  left: 2em;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
   position: absolute;
   color: silver;
   font-size: 3em;
 }
 
 .cardcontainer {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   grid-gap: 3em 1em;
   position: relative;
-  background-color:#EEEEEE;
+  background-color: #EEEEEE;
   padding: 2em;
 }
 
 .card {
-  background:white;
+  background: white;
   border-radius: 1em;
   border: 2px solid seagreen;
   height: 30vh;
@@ -197,39 +215,74 @@ footer {
 }
 
 .landmark {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
   grid-gap: 0 2em;
   background-color: #EEEEEE;
   font-size: 2em;
   position: relative;
-  min-height:100vh;
+  min-height: 100vh;
 }
 
 .landmark img {
   width: 100%;
-  height:100%;
-  object-fit: cover;
-  margin:0;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
   position: relative;
 }
 
 .landmark div {
-  padding-top:2em;
+  padding-top: 2em;
 }
+
 .landmark div h4 {
   color: seagreen;
   position: relative;
 }
+
+/* NEW SHIT ----------------------------------------------------------------------- */
 #quiz {
   position: absolute;
-  background-color: seagreen;
+  background-color: #EEEEEE;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1em;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 25px;
   display: none;
-  padding:1em;
+  padding: 1em;
   border: 2px solid silver;
   border-radius: 20px;
+  z-index: 2;
 }
+
+@media screen and (max-width: 500px) {
+  #quiz {
+    font-size: 15px;
+    padding: 0.5em;
+  }
+}
+
+#quizbackground {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 1;
+  top: 0;
+}
+
+/*END NEW SHIT ---------------------------------------------------------------------------*/
+.start {
+  border-radius: 20px;
+  background: seagreen;
+  font-size: 1.1em;
+  padding: 7px;
+  color: white;
+}
+/*# sourceMappingURL=Index.css.map */
