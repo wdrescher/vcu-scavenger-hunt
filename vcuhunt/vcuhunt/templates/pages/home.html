@@ -6,9 +6,7 @@
     <div class="welcome">
         <h1 class="animated bounceInRight slow">vcuhunt</h1>
         <p>the superior vcu scavenger hunt</p>
-        <a href="{% url 'landmarks:list' %}">
-            <button class="start">Start</button>
-        </a>
+        <div onclick="window.location='{% url 'landmarks:list' %}'"class="start">Start</div>
     </div>
     <section class="slideshow"> 
             <!-- Full-width images with number and caption text -->

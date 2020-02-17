@@ -271,12 +271,28 @@ position: relative;
 }
 
 .start {
-  border-radius: 20px;
-  background: seagreen;
-  font-size: 1.1em;
+  border-radius: 5px;
+  background: grey;
+  font-size: 24px;
+  text-transform: uppercase; 
   padding: 7px;
   color: white;
+  border: 0 solid white; 
+  display: flex; 
+  flex-flow: row wrap; 
+  width: 100%; 
+  max-width: 200px; 
+  margin: auto; 
+  justify-content: center;
+  align-items: center;
 }
+
+.start:hover {
+  @extend .start; 
+  box-shadow: 0 1px 4px white;
+  transform: translateY(-1px);
+}
+
 
 .container { 
   width: 80%; 
@@ -284,4 +300,53 @@ position: relative;
   max-width: 1100px; 
   display: flex;
   margin-top: 100px; 
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.account-container {
+  display: flex;
+  flex-flow: column wrap; 
+  justify-content: center;
+  align-items: center;
+  margin: auto; 
+}
+
+.landmark-list {
+  display: flex;
+  flex-flow: column nowrap; 
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%; 
+  margin: auto; 
+
+  &__container {
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%; 
+  }
+
+  &__card {
+    margin: 50px auto; 
+    height: 400px; 
+    width: 100%; 
+    max-width: 400px; 
+    flex-grow: 1;
+    border-radius: 10px; 
+    border: 1px solid grey; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__title {
+    font-size: 24px; 
+    text-transform: uppercase;
+  }
+
+
 }
