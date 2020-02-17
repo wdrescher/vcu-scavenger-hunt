@@ -269,6 +269,22 @@ padding-top:2em;
 color: seagreen;
 position: relative;
 }
+.landmark div button {
+  font-size: 2em;
+}
+
+.landmark div #quiz {
+  position: absolute;
+  background-color: seagreen;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+  display: none;
+  padding:1em;
+  border: 2px solid silver;
+  border-radius: 20px;
+}
 
 .start {
   border-radius: 5px;
@@ -350,3 +366,4 @@ body {
 
 
 }
+
