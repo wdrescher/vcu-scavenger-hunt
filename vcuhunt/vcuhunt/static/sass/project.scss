@@ -355,3 +355,15 @@ body {
 
 
 }
+
+#aboutgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1.5em;
+  column-gap: 4em;
+  top: 7vh;
+  height:100vh;
+  position: relative;
+  background-image: url(../images/landmarks/img2.jpg);
+  color: white;
+}

@@ -1,1 +1,24 @@
 {% extends "base.html" %}
+
+{% load static %}
+
+{% block full_screen %}
+<div id="aboutgrid">
+    <div>
+        <h2>about the app</h2>
+        <p>vcuhunt is a scavenger hunt highlighting various landmarks throughout the vcu campus in richmond, va.</p>
+        <p>it's perfect for use on your computer, tablet, or phone!</p>
+    </div>
+    <div>
+        <h2>about the creators</h2>
+        <p>Willem, Bryan, and An are three stellar computer science students at vcu. this app was created for a project in the ux design course in spring 2020.</p>
+    </div>
+</div>
+{% endblock full_screen %}
+
+
+{% block javascript %}
+<script>
+    document.getElementById("shit").style.display="none";
+</script>
+{% endblock javascript %}
