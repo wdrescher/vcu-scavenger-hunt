@@ -1,78 +1,90 @@
 /* Project specific Javascript goes here. */
 
+function initMap() {
+    // Your Location
+    const loc = { lat: 42.361145, lng: -71.057083 };
+    // Centered map on location
+    const map = new google.maps.Map(document.querySelector('.map')
+    , {
+        zoom: 14,
+        center: loc
+    });
+    // The marker, positioned at location
+    const marker = new google.maps.Marker({ position: loc, map: map});
+}
 
 <script>
-    function openForm() {
-        document.getElementById("quiz").style.display = "block";
+    function openform() {
+        document.getelementbyid("quiz").style.display = "block";
     }
     
-    function closeForm() {
-        document.getElementById("quiz").style.display = "none";
+    function closeform() {
+        document.getelementbyid("quiz").style.display = "none";
     }
 
-    function submitAnswer() {
-    var radios = document.getElementsByName("Quiz Question");
+    function submitanswer() {
+    var radios = document.getelementsbyname("quiz question");
     var i = 0, len = radios.length;
     var checked = false;
-    var userAnswer;
+    var useranswer;
     
     for( ; i < len; i++ ) {
         if(radios[i].checked) {
         checked = true;
-        userAnswer = radios[i].value;
+        useranswer = radios[i].value;
         }
     } 
     // if user click submit button without selecting any option, alert box should be say "please select choice answer".
     if(!checked) {
-        alert("Please select an answer");
+        alert("please select an answer");
         return;
     }
-    // Correct answer
-    if(userAnswer === "maison") {
-        alert("Answer is correct!");
+    // correct answer
+    if(useranswer === "maison") {
+        alert("answer is correct!");
     }
     // incorrect answer
     else {
-        alert("Answer is wrong!");
+        alert("answer is wrong!");
     }
     
     }
 
 </script>
-{% endblock quizScript %}
+{% endblock quizscript %}
 <script>
-    function openForm() {
-        document.getElementById("quiz").style.display = "block";
+    function openform() {
+        document.getelementbyid("quiz").style.display = "block";
     }
     
-    function closeForm() {
-        document.getElementById("quiz").style.display = "none";
+    function closeform() {
+        document.getelementbyid("quiz").style.display = "none";
     }
 
-    function submitAnswer() {
-    var radios = document.getElementsByName("Quiz Question");
+    function submitanswer() {
+    var radios = document.getelementsbyname("quiz question");
     var i = 0, len = radios.length;
     var checked = false;
-    var userAnswer;
+    var useranswer;
     
     for( ; i < len; i++ ) {
         if(radios[i].checked) {
         checked = true;
-        userAnswer = radios[i].value;
+        useranswer = radios[i].value;
         }
     } 
     // if user click submit button without selecting any option, alert box should be say "please select choice answer".
     if(!checked) {
-        alert("Please select an answer");
+        alert("please select an answer");
         return;
     }
-    // Correct answer
-    if(userAnswer === "maison") {
-        alert("Answer is correct!");
+    // correct answer
+    if(useranswer === "maison") {
+        alert("answer is correct!");
     }
     // incorrect answer
     else {
-        alert("Answer is wrong!");
+        alert("answer is wrong!");
     }
     
     }
