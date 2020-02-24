@@ -26,7 +26,8 @@
                 <button type="button" class="btn btn-primary btn-sm" onClick="openForm()">Complete</button>
                 <div id="quiz">
                     <form method="post" enctype="text/plain">
-                        <P>1. The word which means "house" is:<BR>
+                        <!-- <P>1. The word which means "house" is:<BR> -->
+                        <h3>The word which means house is: </h3> <p>
                         <input type="radio" name="Quiz Question" value="maison">maison<BR>
                         <input type="radio" name="Quiz Question" value="quatre">quatre<BR>
                         <input type="radio" name="Quiz Question" value="soleil">soleil<BR>
@@ -41,6 +42,7 @@
         </div>
     </section>
 
+    <div id="quizbackground"></div>
 
 {% endblock content %}
 
@@ -50,10 +52,12 @@
 <script>
     function openForm() {
         document.getElementById("quiz").style.display = "block";
+        document.getElementById("quizbackground").style.display = "block";
     }
     
     function closeForm() {
         document.getElementById("quiz").style.display = "none";
+        document.getElementById("quizbackground").style.display = "none";
     }
 
     function submitAnswer() {
@@ -85,11 +89,17 @@
         
     }
 
+    $(document).mouseup(function(e) 
+    {
+        var container = $("#quiz");
+
+        // if the target of the click isn't the container nor a descendant of the container
+        if (!container.is(e.target) && container.has(e.target).length === 0) 
+        {
+        closeForm();
+        }
+    });
+
 </script>
 
 {% endblock quizScript %}
-
-{% block mapScript %}
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5g-n2TE2_POT7yZTVeffHJ95Oz0osxvg&callback=initMap"
-    async defer></script>
-{% endblock mapScript %}

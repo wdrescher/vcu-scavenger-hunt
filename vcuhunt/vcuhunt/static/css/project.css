@@ -235,18 +235,33 @@ footer {
   margin-bottom: 2em;
   border: 2px solid black; }
 
-.landmark div #quiz {
+#quiz {
   position: absolute;
-  background-color: seagreen;
+  background-color: #EEEEEE;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 24px;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
   display: none;
   padding: 1em;
   border: 2px solid silver;
-  border-radius: 20px; }
+  border-radius: 20px;
+  z-index: 2; }
+
+@media screen and (max-width: 500px) {
+  #quiz {
+    font-size: 15px;
+    padding: 0.5em; } }
+
+#quizbackground {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 1;
+  top: 0; }
 
 .start, .start:hover {
   border-radius: 5px;
