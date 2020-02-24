@@ -1,0 +1,27 @@
+Blind testing feedback
+
+Good:
+    -Home page looks modern
+    -Slideshow images are recognizeable
+    -Obvious how to start the hunt 
+    -Nice to see map
+
+Bad:
+    -Top bar looks plain(Nav bar)
+    -Bottom bar doesn't line up right(Footer)
+    -Landmark list looks plain(No styling from Willem yet)
+    -Landmark Detail page looks a plain
+    -Altria question was confusing
+        -Why is it relevant
+        -Should mention that its French
+    -When question is answered correctly, the black overlay doesn't disappear
+    -Should be able to click quiz word to select answer(as opposed to only the radio button)
+    -After question is successfully completed, should be redirected to list of landmarks
+    -Map makes it easy to see where to go, maybe should be hidden by default
+    -About page styling looks weird(image repeats, sentence placement doesn't look right)
+    -My Profile page seems unnecessary or unfinished
+
+Comments:
+    -Most feedback is that the aesthetic is lacking.  Maybe focus on a color scheme
+
+Note: Words in parentheses were added by Bryan for clarification

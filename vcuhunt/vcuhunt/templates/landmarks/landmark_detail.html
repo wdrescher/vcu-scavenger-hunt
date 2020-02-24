@@ -1,6 +1,105 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
-THIS is the DETAIL page
-    {{landmark.name}}
+<!-- THIS is the DETAIL page -->
+    <!-- {{landmark.name}} -->
+    <section class = "landmark">
+
+        <image src = "{% static 'images/landmarks/img1.jpg' %}"></image>
+        <div class="info">
+            <div class="map">
+                <iframe
+                    width="460"
+                    height="345"
+                    frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD5g-n2TE2_POT7yZTVeffHJ95Oz0osxvg
+                    &q=Altria+Theater,Richmond+VA" allowfullscreen>
+                </iframe>
+            </div>
+            <div>
+                <h1>Altria Theater</h1>
+                <h4>100 W Main St</h4>
+                <p>This is the coolest theater in Virginia. Take a look inside to complete this hunt.</p>
+                
+                <button type="button" class="btn btn-primary btn-sm" onClick="openForm()">Complete</button>
+                <div id="quiz">
+                    <form method="post" enctype="text/plain">
+                        <!-- <P>1. The word which means "house" is:<BR> -->
+                        <h3>The word which means house is: </h3> <p>
+                        <input type="radio" name="Quiz Question" value="maison">maison<BR>
+                        <input type="radio" name="Quiz Question" value="quatre">quatre<BR>
+                        <input type="radio" name="Quiz Question" value="soleil">soleil<BR>
+                        <input type="radio" name="Quiz Question" value="poisson">poisson<BR>
+                        </p>
+                    </form>
+                    <button type="button" class="btn btn-success btn-sm" onClick="submitAnswer()">Submit</button>
+                    <button type="button" class="btn btn-danger btn-sm" onClick="closeForm()">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="quizbackground"></div>
+
 {% endblock content %}
+
+{% block quizScript %}
+
+
+<script>
+    function openForm() {
+        document.getElementById("quiz").style.display = "block";
+        document.getElementById("quizbackground").style.display = "block";
+    }
+    
+    function closeForm() {
+        document.getElementById("quiz").style.display = "none";
+        document.getElementById("quizbackground").style.display = "none";
+    }
+
+    function submitAnswer() {
+        var radios = document.getElementsByName("Quiz Question");
+        var i = 0, len = radios.length;
+        var checked = false;
+        var userAnswer;
+        
+        for( ; i < len; i++ ) {
+            if(radios[i].checked) {
+            checked = true;
+            userAnswer = radios[i].value;
+            }
+        } 
+        // if user click submit button without selecting any option, alert box should be say "please select choice answer".
+        if(!checked) {
+            alert("Please select an answer");
+            return;
+        }
+        // Correct answer
+        if(userAnswer === "maison") {
+            alert("Answer is correct!");
+            document.getElementById("quiz").style.display = "none";
+        }
+        // incorrect answer
+        else {
+            alert("Answer is wrong!");
+        }
+        
+    }
+
+    $(document).mouseup(function(e) 
+    {
+        var container = $("#quiz");
+
+        // if the target of the click isn't the container nor a descendant of the container
+        if (!container.is(e.target) && container.has(e.target).length === 0) 
+        {
+        closeForm();
+        }
+    });
+
+</script>
+
+{% endblock quizScript %}
