@@ -301,7 +301,8 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 100%;
-  margin: auto; }
+  margin: auto;
+  contain: content; }
   .landmark-list__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -326,7 +327,6 @@ body {
         -ms-flex-positive: 1;
             flex-grow: 1;
     border-radius: 10px;
-    border: 1px solid grey;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -335,10 +335,43 @@ body {
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    opacity: .8;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-shadow: 1px 3px 5px grey;
+            box-shadow: 1px 3px 5px grey; }
   .landmark-list__title {
+    padding: 10px;
+    background-color: white;
     font-size: 24px;
-    text-transform: uppercase; }
+    font-weight: 400;
+    color: black;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .landmark-list__button {
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    width: 100px;
+    line-height: 1.5; }
 
 #aboutgrid {
   display: grid;

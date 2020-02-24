@@ -2,13 +2,18 @@
 
 {% block content %}
     <div class="landmark-list">
-    <h1>Landmarks</h1>
+    <h1>Todo</h1>
     {% if landmark_list %}
         <div class="landmark-list__container">
         {% for landmark in landmark_list %}
-                <div class="landmark-list__card" onclick="window.location='{% url 'landmarks:detail' pk=landmark.pk %}'">
+                <div 
+                    class="landmark-list__card" 
+                    onclick="window.location='{% url 'landmarks:detail' pk=landmark.pk %}'"
+                    style="background: url({{landmark.image_url}}) center"
+                    >
                     <div class="landmark-list__title">
                         {{landmark.name}}
+                        <div class="landmark-list__button">Hunt</div>
                     </div>
                 </div>
         {% endfor %}
