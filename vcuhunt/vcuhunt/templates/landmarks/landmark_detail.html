@@ -80,11 +80,14 @@
         // Correct answer
         if(userAnswer === "maison") {
             alert("Answer is correct!");
-            document.getElementById("quiz").style.display = "none";
+            closeForm();
+            window.location='{% url 'landmarks:list' %}';
         }
         // incorrect answer
         else {
             alert("Answer is wrong!");
+            closeForm();
+            window.location='{% url 'landmarks:list' %}';
         }
         
     }

@@ -261,7 +261,8 @@ footer {
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
   z-index: 1;
-  top: 0; }
+  top: 0;
+  left: 0; }
 
 .start, .start:hover {
   border-radius: 5px;
