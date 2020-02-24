@@ -27,11 +27,17 @@
                 <div id="quiz">
                     <form method="post" enctype="text/plain">
                         <!-- <P>1. The word which means "house" is:<BR> -->
-                        <h3>The word which means house is: </h3> <p>
-                        <input type="radio" name="Quiz Question" value="maison">maison<BR>
-                        <input type="radio" name="Quiz Question" value="quatre">quatre<BR>
-                        <input type="radio" name="Quiz Question" value="soleil">soleil<BR>
-                        <input type="radio" name="Quiz Question" value="poisson">poisson<BR>
+                        <h3>The word which means house is: </h3> 
+                        <p>
+                        <input type="radio" name="Quiz Question" value="maison" id="maison">
+                        <label for="maison">maison</label> <BR>
+                        <input type="radio" name="Quiz Question" value="quatre" id="quatre">
+                        <label for="quatre">quatre</label> <BR>
+                        <input type="radio" name="Quiz Question" value="soleil" id="soleil">
+                        <label for="soleil">soleil</label> <BR>
+                        <input type="radio" name="Quiz Question" value="poisson" id="poisson">
+                        <label for="poisson">poisson</label> <BR>
+
                         </p>
                     </form>
                     <button type="button" class="btn btn-success btn-sm" onClick="submitAnswer()">Submit</button>
