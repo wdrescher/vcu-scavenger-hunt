@@ -9,19 +9,21 @@
 
         <image src = "{% static 'images/landmarks/img1.jpg' %}"></image>
         <div class="info">
-            <iframe
-                width="460"
-                height="345"
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD5g-n2TE2_POT7yZTVeffHJ95Oz0osxvg
-                &q=Altria+Theater,Richmond+VA" allowfullscreen>
-            </iframe>
+            <div class="map">
+                <iframe
+                    width="460"
+                    height="345"
+                    frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD5g-n2TE2_POT7yZTVeffHJ95Oz0osxvg
+                    &q=Altria+Theater,Richmond+VA" allowfullscreen>
+                </iframe>
+            </div>
             <div>
-                <h1>altria theater</h1>
-                <h4>100 w main st</h4>
+                <h1>Altria Theater</h1>
+                <h4>100 W Main St</h4>
                 <p>This is the coolest theater in Virginia. Take a look inside to complete this hunt.</p>
                 
-                <button onClick="openForm()">Complete</button>
+                <button type="button" class="btn btn-primary btn-sm" onClick="openForm()">Complete</button>
                 <div id="quiz">
                     <form method="post" enctype="text/plain">
                         <P>1. The word which means "house" is:<BR>
@@ -31,8 +33,8 @@
                         <input type="radio" name="Quiz Question" value="poisson">poisson<BR>
                         </p>
                     </form>
-                    <button onClick="submitAnswer()">Submit</button>
-                    <button onClick="closeForm()">Cancel</button>
+                    <button type="button" class="btn btn-success btn-sm" onClick="submitAnswer()">Submit</button>
+                    <button type="button" class="btn btn-danger btn-sm" onClick="closeForm()">Cancel</button>
                 </div>
 
             </div>

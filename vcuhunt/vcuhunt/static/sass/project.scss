@@ -252,11 +252,11 @@ margin: auto;
 .landmark {
 display: grid;
 grid-template-columns: 2fr 1fr;
-grid-gap: 0 2em;
+grid-gap: 0 1em;
 background-color: #EEEEEE;
 font-size: 2em;
 position: relative;
-min-height:100vh;
+min-height:90vh;
 }
 
 .landmark img {
@@ -268,14 +268,21 @@ position: relative;
 }
 
 .landmark div {
-padding-top:2em;
+// padding-top:2em;
+text-align: center;
 }
 .landmark div h4 {
 color: seagreen;
 position: relative;
 }
-.landmark div button {
-  font-size: 2em;
+.landmark button {
+  font-size: 1em;
+}
+
+.landmark .map {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border: 2px solid black;
 }
 
 .landmark div #quiz {
@@ -284,7 +291,7 @@ position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1em;
+  font-size: 24px;
   display: none;
   padding:1em;
   border: 2px solid silver;
@@ -368,7 +375,6 @@ body {
     font-size: 24px; 
     text-transform: uppercase;
   }
-<<<<<<< HEAD
 
 
 }
@@ -384,6 +390,3 @@ body {
   background-image: url(../images/landmarks/img2.jpg);
   color: white;
 }
-=======
-}
->>>>>>> landmark
