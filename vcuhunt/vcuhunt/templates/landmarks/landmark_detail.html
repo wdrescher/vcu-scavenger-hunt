@@ -7,34 +7,35 @@
     <!-- {{landmark.name}} -->
     <section class = "landmark">
 
-        <!-- <image src = "{% static 'images/landmarks/img1.jpg' %}"></image> -->
-        <!-- <div class="map"></div> -->
-        <iframe
-  width="600"
-  height="450"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD5g-n2TE2_POT7yZTVeffHJ95Oz0osxvg
-    &q=Space+Needle,Seattle+WA" allowfullscreen>
-</iframe>
-        <div>
-            <h1>altria theater</h1>
-            <h4>100 w main st</h4>
-            <p>This is the coolest theater in Virginia. Take a look inside to complete this hunt.</p>
-            
-            <button onClick="openForm()">Complete</button>
-            <div id="quiz">
-                <form method="post" enctype="text/plain">
-                    <P>1. The word which means "house" is:<BR>
-                    <input type="radio" name="Quiz Question" value="maison">maison<BR>
-                    <input type="radio" name="Quiz Question" value="quatre">quatre<BR>
-                    <input type="radio" name="Quiz Question" value="soleil">soleil<BR>
-                    <input type="radio" name="Quiz Question" value="poisson">poisson<BR>
-                    </p>
-                </form>
-                <button onClick="submitAnswer()">Submit</button>
-                <button onClick="closeForm()">Cancel</button>
-            </div>
+        <image src = "{% static 'images/landmarks/img1.jpg' %}"></image>
+        <div class="info">
+            <iframe
+                width="460"
+                height="345"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD5g-n2TE2_POT7yZTVeffHJ95Oz0osxvg
+                &q=Altria+Theater,Richmond+VA" allowfullscreen>
+            </iframe>
+            <div>
+                <h1>altria theater</h1>
+                <h4>100 w main st</h4>
+                <p>This is the coolest theater in Virginia. Take a look inside to complete this hunt.</p>
+                
+                <button onClick="openForm()">Complete</button>
+                <div id="quiz">
+                    <form method="post" enctype="text/plain">
+                        <P>1. The word which means "house" is:<BR>
+                        <input type="radio" name="Quiz Question" value="maison">maison<BR>
+                        <input type="radio" name="Quiz Question" value="quatre">quatre<BR>
+                        <input type="radio" name="Quiz Question" value="soleil">soleil<BR>
+                        <input type="radio" name="Quiz Question" value="poisson">poisson<BR>
+                        </p>
+                    </form>
+                    <button onClick="submitAnswer()">Submit</button>
+                    <button onClick="closeForm()">Cancel</button>
+                </div>
 
+            </div>
         </div>
     </section>
 
