@@ -66,7 +66,11 @@
         document.getElementById("quizbackground").style.display = "none";
     }
 
-    function submitAnswer() {
+    function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function submitAnswer() {
         var radios = document.getElementsByName("Quiz Question");
         var i = 0, len = radios.length;
         var checked = false;
@@ -80,19 +84,27 @@
         } 
         // if user click submit button without selecting any option, alert box should be say "please select choice answer".
         if(!checked) {
-            alert("Please select an answer");
+            if (!quiz.innerHTML.includes("Please")) {
+                var para = document.createElement("p");
+                var node = document.createTextNode("Please select an answer");
+                para.style.cssText="font-size:15px; color: red;"
+                para.appendChild(node);
+                para.style.fonnt
+                quiz.append(para);
+            }
             return;
         }
         // Correct answer
         if(userAnswer === "maison") {
-            alert("Answer is correct!");
-            closeForm();
+            quiz.innerHTML="Correct! Nice work. Redirecting...";
+            await sleep(3000);
             window.location='{% url 'landmarks:list' %}';
+            //mark as compelete here
         }
         // incorrect answer
         else {
-            alert("Answer is wrong!");
-            closeForm();
+            quiz.innerHTML="Incorrect. Look closely! Redirecting...";
+            await sleep(3000);
             window.location='{% url 'landmarks:list' %}';
         }
         
