@@ -7,7 +7,7 @@
     <!-- {{landmark.name}} -->
     <section class = "landmark">
 
-        <image src = "{% static 'images/landmarks/img1.jpg' %}"></image>
+        <image src = "{{landmark.image_url}}"></image>
         <div class="info">
             <div class="map">
                 <iframe
@@ -15,28 +15,28 @@
                     height="345"
                     frameborder="0" style="border:0"
                     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD5g-n2TE2_POT7yZTVeffHJ95Oz0osxvg
-                    &q=Altria+Theater,Richmond+VA" allowfullscreen>
+                    &q={{landmark.map_query}},Richmond+VA" allowfullscreen>
                 </iframe>
             </div>
             <div>
-                <h1>Altria Theater</h1>
-                <h4>100 W Main St</h4>
-                <p>This is the coolest theater in Virginia. Take a look inside to complete this hunt.</p>
+                <h1>{{landmark.name}}</h1>
+                <h4>{{landmark.address}}</h4>
+                <p>{{landmark.description}}</p>
                 
                 <button type="button" class="btn btn-primary btn-sm" onClick="openForm()">Complete</button>
                 <div id="quiz">
-                    <form method="post" enctype="text/plain">
+                    <form method="post" enctype="text/plain" id="quizform">
                         <!-- <P>1. The word which means "house" is:<BR> -->
                         <h3>The word which means house is: </h3> 
                         <p>
-                        <input type="radio" name="Quiz Question" value="maison" id="maison">
-                        <label for="maison">maison</label> <BR>
-                        <input type="radio" name="Quiz Question" value="quatre" id="quatre">
-                        <label for="quatre">quatre</label> <BR>
-                        <input type="radio" name="Quiz Question" value="soleil" id="soleil">
-                        <label for="soleil">soleil</label> <BR>
-                        <input type="radio" name="Quiz Question" value="poisson" id="poisson">
-                        <label for="poisson">poisson</label> <BR>
+                        <input type="radio" name="Quiz Question" value="{{landmark.answer1}}" id="{{landmark.answer1}}">
+                        <label for="{{landmark.answer1}}">{{landmark.answer1}}</label> <BR>
+                        <input type="radio" name="Quiz Question" value="{{landmark.answer2}}" id="{{landmark.answer2}}">
+                        <label for="{{landmark.answer2}}">{{landmark.answer2}}</label> <BR>
+                        <input type="radio" name="Quiz Question" value="{{landmark.answer3}}" id="{{landmark.answer3}}">
+                        <label for="{{landmark.answer3}}">{{landmark.answer3}}</label> <BR>
+                        <input type="radio" name="Quiz Question" value="{{landmark.answer4}}" id="{{landmark.answer4}}">
+                        <label for="{{landmark.answer4}}">{{landmark.answer4}}</label> <BR>
 
                         </p>
                     </form>
@@ -56,6 +56,7 @@
 
 
 <script>
+
     function openForm() {
         document.getElementById("quiz").style.display = "block";
         document.getElementById("quizbackground").style.display = "block";
@@ -95,7 +96,7 @@
             return;
         }
         // Correct answer
-        if(userAnswer === "maison") {
+        if(userAnswer === "{{landmark.c_answer}}") {
             quiz.innerHTML="Correct! Nice work. Redirecting...";
             await sleep(3000);
             window.location='{% url 'landmarks:list' %}';
