@@ -23,6 +23,7 @@ function initMap() {
         document.getelementbyid("quiz").style.display = "none";
     }
 
+
     function submitanswer() {
     var radios = document.getelementsbyname("quiz question");
     var i = 0, len = radios.length;
@@ -49,6 +50,10 @@ function initMap() {
         alert("answer is wrong!");
     }
     
+    }
+
+    function togglemap() {
+        document.getelementbyid("map").style.display = "none";
     }
 
 </script>

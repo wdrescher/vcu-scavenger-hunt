@@ -14,6 +14,7 @@
                 <p>{{landmark.description}}</p>
                 
                 <button type="button" class="btn btn-primary btn-sm" onClick="openForm()">Complete</button>
+                <button type="button" class="btn btn-primary btn-sm" onClick="toggleMap()">Hint!</button>
                 <div id="quiz">
                     <form method="post" enctype="text/plain" id="quizform">
                         <!-- <P>1. The word which means "house" is:<BR> -->
@@ -33,9 +34,8 @@
                     <button type="button" class="btn btn-success btn-sm" onClick="submitAnswer()">Submit</button>
                     <button type="button" class="btn btn-danger btn-sm" onClick="closeForm()">Cancel</button>
                 </div>
-
             </div>
-            <div class="map">
+            <div class="map" id="map">
                 <iframe
                     width="460"
                     height="345"
@@ -55,6 +55,16 @@
 
 
 <script>
+    function toggleMap() {
+        //document.getElementById("map").style.display = "none";
+
+        if (document.getElementById("map").style.display == "none") {
+            document.getElementById("map").style.display = "block";
+        }
+        else {
+            document.getElementById("map").style.display = "none";
+        }
+    }
 
     function openForm() {
         document.getElementById("quiz").style.display = "block";
