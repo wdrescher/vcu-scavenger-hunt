@@ -3,21 +3,11 @@
 {% load static %}
 
 {% block content %}
-<!-- THIS is the DETAIL page -->
-    <!-- {{landmark.name}} -->
     <section class = "landmark">
 
         <image src = "{{landmark.image_url}}"></image>
         <div class="info">
-            <div class="map">
-                <iframe
-                    width="460"
-                    height="345"
-                    frameborder="0" style="border:0"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD5g-n2TE2_POT7yZTVeffHJ95Oz0osxvg
-                    &q={{landmark.map_query}},Richmond+VA" allowfullscreen>
-                </iframe>
-            </div>
+
             <div>
                 <h1>{{landmark.name}}</h1>
                 <h4>{{landmark.address}}</h4>
@@ -44,6 +34,15 @@
                     <button type="button" class="btn btn-danger btn-sm" onClick="closeForm()">Cancel</button>
                 </div>
 
+            </div>
+            <div class="map">
+                <iframe
+                    width="460"
+                    height="345"
+                    frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD5g-n2TE2_POT7yZTVeffHJ95Oz0osxvg
+                    &q={{landmark.map_query}},Richmond+VA" allowfullscreen>
+                </iframe>
             </div>
         </div>
     </section>

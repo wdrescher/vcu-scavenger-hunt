@@ -422,3 +422,14 @@ body {
   position: relative;
   background-image: url(../images/landmarks/img2.jpg);
   color: white; }
+
+@media screen and (max-width: 576px) {
+  .landmark {
+    grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .container {
+    width: 100%; }
+  iframe {
+    width: 100%; } }
