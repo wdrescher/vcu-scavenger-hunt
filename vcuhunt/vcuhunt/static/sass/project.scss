@@ -64,7 +64,7 @@ header {
   margin: 0;
   padding:0;
   position: absolute;
-  top:7vh;
+  top:30px;
   bottom:0;
 }
 
@@ -283,6 +283,7 @@ position: relative;
   margin-top: 1em;
   margin-bottom: 2em;
   border: 2px solid black;
+  display: none;
 }
 
 #quiz {
@@ -350,6 +351,11 @@ position: relative;
   display: flex;
   margin-top: 100px; 
 }
+
+//this might fix the weird footer on the landmark_list page
+// #shit {  
+//   margin-bottom: 100px;
+// }
 
 body {
   font-family: Helvetica, Arial, sans-serif;
@@ -425,10 +431,12 @@ body {
   grid-template-columns: 1fr 1fr;
   padding: 1.5em;
   column-gap: 4em;
-  top: 7vh;
+  top: 30px;
   height:100vh;
   position: relative;
   background-image: url(../images/landmarks/img2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
 }
 
