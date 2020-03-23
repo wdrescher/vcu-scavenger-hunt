@@ -253,7 +253,7 @@ margin: auto;
 .landmark {
 display: grid;
 grid-template-columns: 2fr 1fr;
-grid-gap: 0 1em;
+grid-gap: 0 0; //edited by an - @bryan
 background-color: #EEEEEE;
 font-size: 2em;
 position: relative;
