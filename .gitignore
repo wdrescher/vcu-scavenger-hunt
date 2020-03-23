@@ -1,3 +1,4 @@
 .vscode
 share
-.pyc
+env
+vcuhunt/env
