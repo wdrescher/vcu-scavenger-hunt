@@ -106,7 +106,7 @@
         }
         // Correct answer
         if(userAnswer === "{{landmark.c_answer}}") {
-            var correct = "Correct! Nice work." + "<div class="loader"></div>";
+            var correct = "Correct! Nice work. <div class='loader'></div>";
             quiz.innerHTML=correct;
             await sleep(3000);
             window.location='{% url 'landmarks:list' %}';
@@ -114,7 +114,7 @@
         }
         // incorrect answer
         else {
-            var incorrect = "Incorrect. Look closely!" + "<div class="loader"></div>";
+            var incorrect = "Incorrect. Look closely! <div class='loader'></div>";
             quiz.innerHTML=incorrect;
             await sleep(3000);
             window.location='{% url 'landmarks:list' %}';
