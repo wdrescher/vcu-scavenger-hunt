@@ -106,14 +106,16 @@
         }
         // Correct answer
         if(userAnswer === "{{landmark.c_answer}}") {
-            quiz.innerHTML="Correct! Nice work. Redirecting...";
+            var correct = "Correct! Nice work." + <div class="loader"></div>;
+            quiz.innerHTML=correct;
             await sleep(3000);
             window.location='{% url 'landmarks:list' %}';
             //mark as compelete here
         }
         // incorrect answer
         else {
-            quiz.innerHTML="Incorrect. Look closely! Redirecting...";
+            var incorrect = "Incorrect. Look closely!" + <div class="loader"></div>;
+            quiz.innerHTML=incorrect;
             await sleep(3000);
             window.location='{% url 'landmarks:list' %}';
         }
