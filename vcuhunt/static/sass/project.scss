@@ -370,9 +370,13 @@ body {
   flex-flow: column nowrap; 
   justify-content: flex-start;
   align-items: flex-start;
-  width: 100%; 
+  width: 80%; 
   margin: auto; 
   contain: content; 
+
+  @media screen and (max-width: 500px) {
+    width: 100%; 
+  }
 
   &__container {
     display: flex;
@@ -496,7 +500,16 @@ body {
   width: 100%; 
   display: flex; 
   flex-flow: row nowrap; 
-  color: gray; 
+  justify-content: flex-start;
+  align-items: center;
+  background-color: lightgray; 
   border-radius: 10px; 
-  height: 20px; 
+  height: 20px;
+  margin: auto;  
+
+  &__completed {
+    border-radius: 10px; 
+    height: 100%; 
+    background-color: #00f; 
+  }
 }

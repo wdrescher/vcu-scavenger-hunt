@@ -90,7 +90,7 @@ function imgCompression() {
 
 // Run django server
 function runServer(cb) {
-  var cmd = spawn('python', ['manage.py', 'runserver'], {stdio: 'inherit'})
+  var cmd = spawn('python3', ['manage.py', 'runserver'], {stdio: 'inherit'})
   cmd.on('close', function(code) {
     console.log('runServer exited with code ' + code)
     cb(code)

@@ -4,8 +4,9 @@
     <div class="landmark-list">
     <h1>Landmarks</h1>
 
+    Progress: 
     <div class="completion-bar">
-     <div class="completion-bar__completed" style="width: {{request.user.get_completion}}%%"></div> 
+        <div class="completion-bar__completed" style="width: {{request.user.get_completion}}%"></div> 
     </div> 
     {% if landmark_list %}
         <div class="landmark-list__container">
