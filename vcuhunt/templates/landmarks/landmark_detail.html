@@ -109,7 +109,7 @@
             var correct = "Correct! Nice work. <div class='loader'></div>";
             quiz.innerHTML=correct;
             await sleep(3000);
-            window.location='{% url 'landmarks:list' %}';
+            window.location='{% url 'users:success' landmark=landmark.id %}';
             //mark as compelete here
         }
         // incorrect answer

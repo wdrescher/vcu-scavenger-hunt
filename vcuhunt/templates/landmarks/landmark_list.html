@@ -3,6 +3,10 @@
 {% block content %}
     <div class="landmark-list">
     <h1>Landmarks</h1>
+
+    <div class="completion-bar">
+     <div class="completion-bar__completed" style="width: {{request.user.get_completion}}%%"></div> 
+    </div> 
     {% if landmark_list %}
         <div class="landmark-list__container">
         {% for landmark in landmark_list %}
@@ -19,7 +23,10 @@
         {% endfor %}
         </div>
     {% else %}
-        No Landmarks
+        <div class="success-message"> Congratulations! You have completed VCU Hunt! </div>
+        <a href="{% url 'users:reset' %}">
+            <button class="btn btn-primary btn-lg">Restart<button>
+        </a>
     {% endif %}
     </div>
 {% endblock content %}

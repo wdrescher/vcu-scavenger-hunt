@@ -5,6 +5,8 @@ from django.views.generic import DetailView, RedirectView, UpdateView
 from django.contrib import messages
 from django.utils.translation import ugettext_lazy as _
 
+from vcuhunt.landmarks.models import Landmark 
+
 User = get_user_model()
 
 
@@ -47,3 +49,19 @@ class UserRedirectView(LoginRequiredMixin, RedirectView):
 
 
 user_redirect_view = UserRedirectView.as_view()
+
+
+class UserSuccessfulLandmarkView(LoginRequiredMixin, RedirectView): 
+
+    def get_redirect_url(self, *args, **kwargs):
+        landmark = Landmark.objects.filter(id=kwargs['landmark'])
+        self.request.user.completed_landmark.add(1)
+        self.request.user.save()
+        return reverse("landmarks:list")
+
+class UserResetView(LoginRequiredMixin, RedirectView):
+    
+    def get_redirect_url(self, *args, **kwargs):
+        self.request.user.completed_landmark.clear()
+        self.request.user.save()
+        return reverse("landmarks:list")

@@ -14,3 +14,8 @@ class User(AbstractUser):
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})
+
+    def get_completion(self): 
+        completed = self.completed_landmark.all().count()
+        total = Landmark.objects.all().count()
+        return round((completed / total) * 100)
